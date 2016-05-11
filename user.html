@@ -1,0 +1,31 @@
+<div>
+	{{error}}
+</div>
+
+<div>
+	<div id = 'userDetails' >
+		Name : {{user.name}}
+		Location : {{user.location}}
+	</div>
+
+	<select ng-model = "repoSortOrder">
+		<option value = "+name">Name</option>
+		<option value = "-stargazers_count">Stars</option>
+		<option value = "+language">Language</option>
+	</select>
+</div>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Star</th>
+		<th>Language</th>
+	</tr>
+	<tr ng-repeat = "repo in repos | orderBy: repoSortOrder">
+		<td><a href = "#/repo/{{user.login}}/{{repo.name}}">{{repo.name}}</a></td>
+		<td>{{repo.stargazers_count}}</td>
+		<td>{{repo.language}}</td>
+	</tr>
+</table>
+<a href = "#/main"> Back To search </a>
+

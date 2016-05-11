@@ -1,0 +1,8 @@
+{
+  "name": "github_viewer",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-route": "^1.4.9"
+  }
+}
